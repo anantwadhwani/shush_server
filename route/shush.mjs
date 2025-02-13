@@ -5,11 +5,12 @@ import Post from '../model/Post.mjs';
 const shush = Router();
 
 // get shushes made on user /shush/userShushes - requires authentication
-shush.get('/userShushes', fetchUserId, async (req, res) => {
+shush.get('/userShushes/:userName', fetchUserId, async (req, res) => {
     let statusMessage = 'fail';
-    const name = 'user';
+    //TODO - replace find criteria
+    const userName = req.params.userName;
     try {
-        const userShushes = await Post.find({ name });
+        const userShushes = await Post.find({ userName });
         if (!userShushes) {
             return res.status(404).json({ statusMessage, msg: 'No shushes found' });
         }

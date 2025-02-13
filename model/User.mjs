@@ -4,9 +4,13 @@ const UserSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true,
-        unique: true,
     },
     userName: {
+        type: String,
+        required: true,
+        unique: true,
+    },
+    secretUserName: {
         type: String,
         required: true,
         unique: true,

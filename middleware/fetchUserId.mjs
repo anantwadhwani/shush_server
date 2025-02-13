@@ -5,12 +5,12 @@ const fetchUserId = (req, res, next) => {
     const secretKey = "Liechtenstein";
     const authToken = req.header("Auth-Token");
     if (!authToken) {
-        return res.staus(401).json({ statusMessage, msg: "Login Again" });
+        return res.status(401).json({ statusMessage, msg: "Login Again" });
     }
     try {
         const tokenMatchPayload = jwt.verify(authToken, secretKey);
         if (!tokenMatchPayload) {
-            return res.staus(500).json({
+            return res.status(500).json({
                 statusMessage,
                 msg: "Could not match Credentials, Login again",
             });

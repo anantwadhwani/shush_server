@@ -13,6 +13,10 @@ const PostSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    secretUserName: {
+        type: String,
+        required: true
+    },
     message: {
         type: String,
         required: true,
