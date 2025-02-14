@@ -7,7 +7,6 @@ const shush = Router();
 // get shushes made on user /shush/userShushes - requires authentication
 shush.get('/userShushes/:userName', fetchUserId, async (req, res) => {
     let statusMessage = 'fail';
-    //TODO - replace find criteria
     const userName = req.params.userName;
     try {
         const userShushes = await Post.find({ userName });

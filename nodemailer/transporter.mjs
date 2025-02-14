@@ -1,4 +1,8 @@
 import nodemailer from 'nodemailer';
+import dotenv from 'dotenv';
+
+dotenv.config();
+const pass = process.env.TRANSPORTER_PASS;
 
 const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
@@ -6,7 +10,7 @@ const transporter = nodemailer.createTransport({
     secure: true,
     auth: {
         user: 'shushem.anonymous@gmail.com',
-        pass: 'czxl nckm vdrh wntk'
+        pass: pass
     },
 });
 

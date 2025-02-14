@@ -1,8 +1,11 @@
 import jwt from "jsonwebtoken";
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const fetchUserId = (req, res, next) => {
     let statusMessage = "fail";
-    const secretKey = "Liechtenstein";
+    const secretKey = process.env.SECRETKEY;
     const authToken = req.header("Auth-Token");
     if (!authToken) {
         return res.status(401).json({ statusMessage, msg: "Login Again" });

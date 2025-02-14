@@ -6,10 +6,13 @@ import passkeyGenerator from '../util/passkeyGenerator.mjs';
 import jwt from 'jsonwebtoken';
 import fetchUserId from '../middleware/fetchUserId.mjs'; 
 import sendMail from '../nodemailer/sendMail.mjs';
+import dotenv from 'dotenv';
+
+dotenv.config();
+const secretKey = process.env.SECRETKEY;
 
 const auth = express.Router();
 
-const secretKey = 'Liechtenstein';
 let passkey = null;
 
 // send a signup mail - Doesn't require authentication
