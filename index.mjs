@@ -16,5 +16,5 @@ app.use('/shush', shush);
 
 const port = 5000;
 app.listen(port, () => {
-    console.log(`Shush Backend server running at http://localhost:${port}`)
+    console.log(`Shush Backend server running at ${port}`)
 })
