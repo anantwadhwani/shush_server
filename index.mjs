@@ -7,8 +7,14 @@ import shush from './route/shush.mjs';
 monogoConnect();
 
 const app = express();
+
 app.use(cors())
 app.use(express.json());
+
+const corsOptions = {
+    origin: "https://shush-w3d5.onrender.com", // frontend URI (ReactJS)
+}
+app.use(cors(corsOptions));
 
 // Available Routes
 app.use('/auth', auth);
