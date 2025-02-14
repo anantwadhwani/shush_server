@@ -14,7 +14,7 @@ app.use(express.json());
 app.use('/auth', auth);
 app.use('/shush', shush);
 
-const port = 5000;
+const port = 4000;
 app.listen(port, () => {
     console.log(`Shush Backend server running at ${port}`)
 })
