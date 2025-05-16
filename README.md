@@ -33,17 +33,16 @@ This backend server powers a **Social Media Application - Shush**, built using *
 * **Users**
 
   * Create, Read, Update, Delete user profiles
-  * Follow/unfollow functionality (if implemented)
 
 * **Posts**
 
   * Create, Read, Update, Delete posts
-  * Like/comment endpoints (optional)
+  * Like/comment endpoints
 
 * **Multiple Users Support**
 
   * API supports interaction between multiple users
-  * Fetch posts by user, filter by category or tags (if applicable)
+  * Fetch posts by user, filter by category or tags
 
 ## 📡 API Endpoints Overview
 
